@@ -5,6 +5,8 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Dashboard</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> 
     <style> 
     .card { 
         background-color: #20B2AA; 
@@ -119,14 +121,20 @@
     .navbar h1 { 
         margin: 0; 
     } 
+ 
+    .table-container { 
+        margin-top: 80px; 
+        /* Membuat ruang antara navbar dan tabel */ 
+        padding: 20px; 
+    } 
     </style> 
 </head> 
  
 <body> 
  
     <div class="navbar"> 
- 
         <span class="openbtn" onclick="openNav()">&#9776;</span> 
+        <h3 class="text-center text-white">Data Siswa</h3> 
         <div class="search-container"> 
             <input type="text" class="search-box" placeholder="Cari..."> 
             <button type="submit">Cari</button> 
@@ -141,39 +149,21 @@
     </div> 
  
     <!-- Konten --> 
+    <!-- Tabel --> 
     <div class="content"> 
+        <div class="container table-container"> 
+            <table class="table table-striped"> 
  
-        <div class="card"> 
-            <p>Jumlah Kelas</p> 
-            <h1>9</h1> 
-            <a href="" target="_blank" class="login-button">Info untuk lebih lanjut</a> 
-        </div> 
-        <div class="card"> 
-            <p>Jumlah Mapel</p> 
-            <h1>12</h1> 
-            <a href="" target="_blank" class="login-button">Info untuk lebih lanjut</a> 
-        </div> 
-        <div class="card"> 
-            <p>Jumlah Siswa</p> 
-            <h1>250</h1> 
-            <a href="" target="_blank" class="login-button">Info untuk lebih lanjut</a> 
-        </div> 
-        <div class="card"> 
-            <p>Jumlah guru</p> 
-            <h1>10</h1> 
-            <a href="" target="_blank" class="login-button">Info untuk lebih lanjut</a> 
-        </div> 
- 
-    </div> 
- 
-    <script> 
-    function openNav() { 
-        document.getElementById("mySidenav").style.width = "250px"; 
-        document.getElementsByClassName("content")[0].style.marginLeft = "250px"; 
-    } 
- 
-    function closeNav() { 
-        document.getElementById("mySidenav").style.width = "0"; 
-        document.getElementsByClassName("content")[0].style.marginLeft = "0"; 
-    } 
-    </script>
+                <thead> 
+                    <tr> 
+                        <th>No</th> 
+                        <th>Nama Siswa</th> 
+                        <th>NISN</th> 
+                        <th>Gender</th> 
+                        <th>Kelas</th> 
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <tr> 
+                        <td>1</td> 
+                        <td>arya
