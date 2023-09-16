@@ -15,12 +15,6 @@
 </head>
 
 <body>
-
-
-
-
-
-
     <button data-drawer-target=" default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
         type="button"
         class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -32,6 +26,7 @@
             </path>
         </svg>
     </button>
+    
     <aside id="default-sidebar"
         class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar">
@@ -78,9 +73,9 @@
         </div>
     </aside>
     <div class="p-4 sm:ml-64">
-        <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-                <a href="">Navbar</a>
+                <a href="">BINUSA</a>
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -135,17 +130,16 @@
                         <td> 
                             <?php echo tampil_full_kelas_byid($row->id_kelas) ?>
                         </td> 
-
-                        <td class="text-center"> 
-                            <a href="" class="btn btn-primary btn-sm">Detail</a> 
-                            <button onClick="hapus(<?php echo $row->id_siswa ?>)" 
-                            class="btn btn-danger btn-sm">Hapus</button> 
+                        <td class=""> 
+                            <!-- <a href="" class="btn btn-primary btn-sm">Detail</a>  -->
+                            <a href="<?php echo base_url('admin/ubah_siswa/' . $row->id_siswa) ?>"class="btn btn-primary btn-sm">Update</a>
+                            <button onClick="hapus(<?php echo $row->id_siswa ?>)" class="btn btn-danger btn-sm">Hapus</button> 
                         </td> 
  
                     </tr> 
                     <?php endforeach ?> 
                 </tbody> 
-                <button class="btn btn-sm btn-warning"><a href="tambah_siswa" class="btn text-dark">Tambah</a></button>
+                <button class="btn btn-sm btn-warning"><a href="<?php echo base_url('admin/tambah_siswa'); ?>" class="btn text-dark fw-bolder text-white">Tambah</a></button>
         </div>
         <script> 
     function openNav() { 
