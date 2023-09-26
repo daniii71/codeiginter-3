@@ -138,6 +138,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; tutup</a> 
         <a href="<?php echo base_url('admin') ?>">Beranda</a> 
         <a href="<?php echo base_url('admin/siswa') ?>">Siswa</a> 
+        <a href="<?php echo base_url('admin/akun') ?>">akun</a> 
     </div> 
  
     <!-- Konten --> 

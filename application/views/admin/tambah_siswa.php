@@ -63,6 +63,10 @@
                                             <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?></option>
                                         <?php endforeach ?>
                                     </select>
+                                    </div>
+                                <div class="mb-3 col-6">
+                                <label for="nisn" class="form-label">Foto</label>
+                                <input type="file" class="form-control" id="nisn" name="foto">
                                 </div>
                                     <button type="submit"
                                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-2/6">
