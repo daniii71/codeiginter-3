@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ubah Siswa</title>
     <script src="https://cdn.tailwindcss.com"></script> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <form action="<?php echo base_url('admin/aksi_ubah_siswa') ?>"  enctype="multipart/form-data" method="post" >
@@ -56,15 +57,14 @@
                                                 <?php echo tampil_full_kelas_byid($data_siswa->id_kelas) ?></option>
                                                 <?php foreach($kelas as $row): ?>
                                         <option value="<?php echo $row->id ?>">
-                                            <?php echo $row->tingkat_kelas.' '.$row->jurusan_kelas ?></option>
+                                            <?php echo $row->tingkat_kelas. ' ' .$row->jurusan_kelas ?></option>
                                         <?php endforeach ?>
                                         </select>
-
                                 </div>
                                 <input type="hidden" name="id_siswa" value="<?php echo $data_siswa->id_siswa; ?>">
                                     <button type="submit"
                                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-2/6">
-                                    Ubah
+                                    <i class="fas fa-pen-to-square"></i>
                                 </button>
                             </div>
                             <?php endforeach; ?>

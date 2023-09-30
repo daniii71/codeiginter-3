@@ -105,7 +105,8 @@ class Admin extends CI_Controller
 			'gender' => $this->input->post('gender'),
 			'id_kelas' => $this->input->post('kelas'),
 		);
-        $eksekusi=$this->m_model->ubah_data('siswa', $data, array('id_siswa'=>$this->input->post('id_siswa')));
+        $eksekusi=$this->m_model->ubah_data
+        ('siswa', $data, array('id_siswa'=>$this->input->post('id_siswa')));
         if($eksekusi)
         {
             $this->session->set_flashdata('sukses', 'berhasil');
@@ -119,8 +120,26 @@ class Admin extends CI_Controller
     }
 
 	public function hapus_siswa($id) {
-		$this->m_model->delete('siswa', 'id_siswa', $id);
-		redirect(base_url('admin/siswa'));
+        $siswa = $this->m_model->get_by_id('siswa', 'id_siswa', $id)->row();
+        if ($siswa) {
+            if ($siswa->foto !== 'User.png') {
+                $file_path = './images/siswa' . $siswa->foto;
+
+            if (file_exists($file_path)) {
+                if (unlink($file_path)) {
+                    // hapus file berhasil menggunakan model delete
+                    $this->m_model->delete('siswa', 'id_siswa', $id);
+                    redirect(base_url('admin/siswa'));
+                } else {
+                    // gagal hapus file
+                    echo "Gagal mengahapus file";
+                }
+            } else {
+                // file tidak di temukan 
+                echo "file tidak ditemukan";
+            }
+            }
+        }
 	}
 
 // akun anda
