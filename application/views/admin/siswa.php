@@ -11,6 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -35,54 +39,42 @@
                 <li>
                     <a href="<?php echo base_url('admin/index') ?>"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 22 21">
-                            <path
-                                d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                            <path
-                                d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                        <span class="ml-3">Dashboard</span>
+                        <i class="fa-solid fa-house">
+                            DASHBROD
+                        </i>
                     </a>
                 </li>
+
+                <br>
                 <li>
-                    <a href="<?php echo base_url('admin/daftar_siswa') ?>"
+                    <a href="<?php echo base_url('admin/siswa') ?>"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 18 18">
-                            <path
-                                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.28
-                                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">Daftar Siswa</span>
+                        <i class="fa-solid fa-person-chalkboard">
+                            siswa
+                        </i>
 
                     </a>
                 </li>
+
+                <br>
                 <li>
-                    <a href="<?php echo base_url('admin/accout') ?>"
+                    <a href="<?php echo base_url('keuangan/pembayaran') ?>"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 18 18">
-                            <path
-                                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.28
-                                d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">accout</span>
+                        <i class="fa-solid fa-money-bill"> Pembayaran</i>
 
                     </a>
                 </li>
+
+                <br>
                 <li>
 
                     <a href="<?php echo base_url('Login/logout'); ?>"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
 
-                        <span class="flex-1 ml-3 whitespace-nowrap">Keluar</span>
-                    </a>
+                  <i class="fa-solid fa-right-from-bracket">
+                        keluar</i>
+                 </a>
+                 </li>
                 </li>
             </ul>
         </div>
@@ -98,7 +90,6 @@
             </div>
         </nav> 
         <br>
-        <br>
         <br>    
         <div class="row ">
             <div class="col-12 card p-2">
@@ -106,8 +97,11 @@
                     <div class="card w-100 m-auto p-2">
                         <table class="table  table-striped">
                         <a href="<?php echo base_url('admin/tambah_siswa') ?>" class="btn btn-success m-2"> 
-                        <i class="fas fa-plus"></i> Tambah 
+                        <i class="fa-solid fa-user-plus"></i> Tambah 
                             </a>
+                            <a href="<?php echo base_url('admin/export') ?>" class="btn btn-primary m-2"> 
+                            <i class="fa-solid fa-square-plus"></i> Export 
+                        </a>
                         <thead> 
                                     <tr> 
                                         <th>No</th> 
@@ -146,11 +140,11 @@
                                         </td> 
                                         <td class="text-center"> 
                                             <a href="<?php echo base_url('admin/ubah_siswa/') . $row->id_siswa ?>" 
-                                                class="btn btn-primary"> 
+                                                class="btn btn-primary"> <i class="fa-solid fa-rotate"></i> 
                                                 Ubah 
                                             </a> 
                                             <button onClick="hapus(<?php echo $row->id_siswa; ?>)" 
-                                                class="btn btn-warning"> 
+                                                class="btn btn-warning"> <i class="fa-solid fa-eraser"></i>
                                                 Hapus 
                                             </button> 
                                         </td> 
@@ -161,6 +155,10 @@
                                     <?php endforeach ?> 
                                 </tbody> 
                             </table> 
+                            <form method="post" action="<?php echo base_url('admin/import') ?>" enctype="multipart/form-data">
+                            <input type="file" name="file" />
+                            <button class="btn btn-primary w-2/12" type="submit" style="background-color: blue"><i class="fa-solid fa-file-import"></i> import</button>
+                        </form>
                         </div> 
                     </div>
                     

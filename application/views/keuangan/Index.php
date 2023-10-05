@@ -69,11 +69,11 @@
         <div class="row">
             <div id="sidebar" class="col-md-3 col-lg-2 d-md-block">
                 <br>
-                <a href="<?php echo base_url('keuangan/keuangan') ?>">
-                    <i class="fas fa-user mr-2"></i> keuangan
-                </a>
                 <a href="<?php echo base_url('keuangan/pembayaran') ?>">
                     <i class="fas fa-user mr-2"></i> pembayaran
+                </a>
+                <a href="<?php echo base_url('admin/siswa') ?>">
+                    <i class="fas fa-user mr-2"></i> siswa
                 </a>
                 <br>
                 <a type="button" onclick="confirmLogout()">

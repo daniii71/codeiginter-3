@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISWA</title>
+    <title>PEMBAYARAN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -49,11 +49,23 @@
                     <a href="<?php echo base_url('keuangan/pembayaran') ?>"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         
-                        <i class="fa-solid fa-money-bill">
-                         KEUANGAN</i>
+                        <i class="fa-solid fa-wallet">
+                            Pembayaran
+                        </i>
 
                     </a>
-                </li>
+                </li> 
+                <br>
+                <li>
+                    <a href="<?php echo base_url('admin/siswa') ?>"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        
+                        <i class="fa-solid fa-person"> 
+                            siswa
+                        </i>
+
+                    </a>
+                </li> 
                 <br>
                 <li>
 
@@ -84,7 +96,10 @@
                     <div class="card w-100 m-auto p-2">
                         <table class="table  table-striped">
                         <a href="<?php echo base_url('keuangan/tambah_pembayaran') ?>" class="btn btn-success m-2"> 
-                        <i class="fas fa-plus"></i> Tambah 
+                        <i class="fa-solid fa-folder-plus"></i> Tambah 
+                        </a>
+                        <a href="<?php echo base_url('keuangan/export') ?>" class="btn btn-primary m-2"> 
+                        <i class="fa-solid fa-file-circle-plus"></i> Export 
                         </a>
                             <thead> 
                                     <tr> 
@@ -115,11 +130,11 @@
                                         </td>
                                         <td class="text-center"> 
                                             <a href="<?php echo base_url('keuangan/ubah_pembayaran/') . $row->id ?>" 
-                                                class="btn btn-primary"> 
+                                                class="btn btn-primary"> <i class="fa-solid fa-camera-rotate"></i>
                                                 Ubah 
                                             </a> 
                                             <button onClick="hapus(<?php echo $row->id; ?>)" 
-                                                class="btn btn-warning"> 
+                                                class="btn btn-warning"><i class="fa-solid fa-trash-can-arrow-up"></i> 
                                                 Hapus 
                                             </button> 
                                         </td> 
@@ -130,6 +145,18 @@
                                     <?php endforeach ?> 
                                 </tbody> 
                             </table> 
+                            <form method="post" action="<?php echo base_url('keuangan/import') ?>" enctype="multipart/form-data">
+                            <input type="file" name="file" />
+                            <button class="btn btn-primary w-2/12" type="submit" style="background-color: blue">
+                            <i class="fa-solid fa-file-arrow-up"></i> import</button>
+                        </form>
+
+                            <!-- <form method="post" action="<?php echo base_url('keuangan/import') ?>"> 
+                            <input type="file" name="file" /></input> 
+                            <button class="btn btn-primary" type="submit" style="background-color:blue"> 
+                            import 
+                           </button> 
+                        </form> -->
                         </div> 
                     </div>
                     
