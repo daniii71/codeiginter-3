@@ -72,9 +72,6 @@
                 <a href="<?php echo base_url('keuangan/pembayaran') ?>">
                     <i class="fas fa-user mr-2"></i> pembayaran
                 </a>
-                <a href="<?php echo base_url('admin/siswa') ?>">
-                    <i class="fas fa-user mr-2"></i> siswa
-                </a>
                 <br>
                 <a type="button" onclick="confirmLogout()">
                     <i class="fas fa-sign-out-alt text-danger">KELUAR</i>

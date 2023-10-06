@@ -95,5 +95,21 @@ public function getDataSiswa()
         }
     }
 
+    //  fungsi untuk mengambil nama mapel dengan nama tabel anda
+    public function get_mapel_by_id($id_mapel)
+    {
+        // ganti 'mapel' dengan nama tabel mapel tersebut 
+        $this->db->select('nama_mapel');
+        $this->db->where('id', $id_mapel);
+        $query = $this->db->get('mapel');
+
+        // priksa apakah query berhasil
+        if ($query->num_rows() > 0) {
+            return $query->row();  
+        } else {
+            return null;
+        }
+    }
+
 }
 ?>
