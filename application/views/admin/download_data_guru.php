@@ -1,3 +1,8 @@
+<?php
+    header("Content-type: application/vnd.ms-excel");
+    header("Content-Disposition: attachment; filename=".$nama.".xls");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +13,7 @@
 </head>
 
 <body>
-    <h1>DATA Guru</h1>
+    <h1>DOWNLOAD</h1>
     <table style="font-size: 14px; font-weight: bold;">
         <tr>
             <td>Email</td>
@@ -32,33 +37,25 @@
             <td>Mapel</td>
             <td>Walikelas</td>
         </tr>
-        <?php $no = 1;
-        foreach ($data_guru as $key) {
-            // ambil nama mapel berdasarkan id_mapel tersebut 
-            $mapel = $this->m_model->get_mapel_by_id($key->id_mapel);
-            // gantilah get_mapel_by_id dengan fungsi yang sama di model tersebut
-            ?>
-            <tr>
-                <td><?php echo $no++; ?></td>
-                <td><?php echo $key->nama_guru; ?></td>
-                <td><?php echo $key->nik; ?></td>
-                <td><?php echo $key->gender; ?></td>
-                <td><?php echo $mapel->nama_mapel; ?></td>
-                <td>
-                    <?php
-                    $walikelas = tampil_full_kelas_byid($key->id_walikelas);
-                    if ($walikelas) {
-                        echo $walikelas;
-                    } else {
-                        echo "Tidak menjadi walikelas";
-                    }
-                    ?>
-                </td>
-            </tr>
         <?php
-        }
-        ?>
+        $no = 1;
+        foreach ($data_guru as $key) {
+            // Ambil nama mapel berdasarkan id_mapel
+            $mapel = $this->m_model->get_mapel_by_id($key->id_mapel);
+            // Gantilah 'get_mapel_by_id' dengan fungsi yang sesuai di model Anda.
+            ?>
+        <tr>
+            <td><?php echo $no++; ?></td>
+            <td><?php echo $key->nama_guru; ?></td>
+            <td><?php echo $key->nik; ?></td>
+            <td><?php echo $key->gender; ?></td>
+            <td><?php echo $mapel->nama_mapel; ?></td>
+            <td><?php echo tampil_full_kelas_byid($key->id); ?></td>
+        </tr>
+        <?php } ?>
     </table>
+
+
 </body>
 
 </html>
